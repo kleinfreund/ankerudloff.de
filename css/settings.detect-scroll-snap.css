@@ -1,0 +1,10 @@
+:root {
+  --scroll-snap-supported: false;
+}
+
+@supports (scroll-snap-points-x: repeat(100%))
+or (-webkit-scroll-snap-points-x: repeat(100%)) {
+  :root {
+    --scroll-snap-supported: true;
+  }
+}

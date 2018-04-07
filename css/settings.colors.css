@@ -1,0 +1,17 @@
+:root {
+  --c-text-hslValue: 0, 0%, 13%;
+  --c-text: hsl(var(--c-text-hslValue));
+
+  --c-background-hslValue: 0, 0%, 95%;
+  --c-background: hsl(var(--c-background-hslValue));
+
+  --c-alt-hslValue: 0, 0%, 85%;
+  --c-alt: hsl(var(--c-alt-hslValue));
+
+  --c-accent: hsl(9, 100%, 44%);
+
+  --c-focus: orange;
+
+  --c-debug: deeppink;
+  --c-debug: transparent;
+}

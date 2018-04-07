@@ -1,0 +1,56 @@
+body {
+  overflow-y: scroll;
+  font-size: var(--f-size);
+  line-height: var(--f-line-height);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: var(--c-text);
+  background-color: hsl(var(--c-background));
+}
+
+img {
+  max-width: 100%;
+}
+
+:focus {
+  outline: 2px solid var(--c-focus);
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  padding: 0;
+  font: inherit;
+  color: currentColor;
+  background-color: inherit;
+  border: none;
+}
+
+button:focus {
+  outline-offset: -2px;
+}
+
+figcaption {
+  padding: calc(var(--spacing) / 4);
+  font-size: 0.8em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ul,
+ol,
+dl,
+dd,
+figure {
+  margin-bottom: calc(var(--spacing) / 2);
+}
+
+a {
+  color: var(--c-accent);
+}

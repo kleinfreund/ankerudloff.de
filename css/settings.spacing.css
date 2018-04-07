@@ -1,0 +1,24 @@
+:root {
+  --spacing: 16px;
+}
+
+@media only screen and (min-width: 640px) {
+  /*                    ^^^^^^^^^^^^^^^^
+                        min-width: calc(16px * 100vw / 2.5vw)
+                        min-width = min-size * viewport-width / fluid-size
+  */
+  :root {
+    --spacing: 2.5vw;
+  }
+}
+
+
+@media only screen and (min-width: 2400px) {
+  /*                    ^^^^^^^^^^^^^^^^
+                        min-width: calc(60px * 100vw / 2.5vw)
+                        min-width = max-size * viewport-width / fluid-size
+  */
+  :root {
+    --spacing: 60px;
+  }
+}

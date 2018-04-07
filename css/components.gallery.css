@@ -1,0 +1,197 @@
+.gallery {
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 1000px) {
+  /*
+  1: Center gallery without specifying width
+  */
+  .gallery {
+    display: flex; /* 1 */
+    justify-content: center; /* 1 */
+  }
+}
+
+.slider {
+  display: grid;
+  /* grid-gap: calc(var(--spacing) / 4); */
+  grid-auto-flow: dense;
+  grid-template-columns:
+    [full-start prev-start]
+    minmax(50px, calc(2 * var(--spacing)))
+    [prev-end list-start]
+    auto
+    [list-end next-start]
+    minmax(50px, calc(2 * var(--spacing)))
+    [next-end full-end];
+}
+
+@media only screen and (min-width: 1400px) {
+  .slider {
+    grid-template-columns:
+      [full-start prev-start]
+      minmax(50px, calc(2 * var(--spacing)))
+      [prev-end list-start]
+      1000px
+      [list-end next-start]
+      minmax(50px, calc(2 * var(--spacing)))
+      [next-end full-end];
+  }
+}
+
+.slider-control {
+  color: hsla(var(--c-text-hslValue), 0.75);
+  padding: calc(var(--spacing) / 2);
+}
+
+.slider-control > svg {
+  width: 100%;
+}
+
+.slider__list {
+  background-color: hsl(0, 0%, 95%);
+  grid-column: list;
+  grid-row: 1;
+}
+
+/*
+1: Makes sure that the focus styles are not occluded
+*/
+.slider__list:focus {
+  position: relative; /* 1 */
+  z-index: 1; /* 1 */
+}
+
+[js-disabled] .slider__list {
+  grid-column: full;
+}
+
+.slider-control {
+  grid-row: 1;
+}
+
+.slider__prev {
+  grid-column: prev;
+}
+
+.slider__next {
+  grid-column: next;
+}
+
+.slider__prev:active > svg {
+  /* transition: transform 0.1s ease-out; */
+  transform: translateX(-2px);
+}
+
+.slider__next:active > svg {
+  /* transition: transform 0.1s ease-out; */
+  transform: translateX(2px);
+}
+
+[js-disabled] .slider__prev,
+[js-disabled] .slider__next {
+  display: none;
+}
+
+.slider__instructions {
+  grid-column: full;
+  padding: calc(var(--spacing) / 4);
+}
+
+.slider__list {
+  list-style: none;
+  margin-bottom: 0;
+  overflow-x: scroll;
+  display: flex;
+}
+
+/*
+1: Stops the flex items from shrinking so that they scroll within the slider.
+*/
+.slider__list > li {
+  flex: 0 0 100%; /* 1 */
+}
+
+.slider p,
+.slider figure {
+  margin-bottom: 0;
+}
+
+/*
+1: Avoid selecting images outside of the visible slider area (i.e. those that are overflowing the scrolling container).
+*/
+.slider__list img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; /* 1 */
+  vertical-align: middle;
+}
+
+.slider__instructions {
+  text-align: center;
+}
+
+.slider__list:not(:focus) ~ .slider__instructions > .slider-instruction--focus {
+  visibility: hidden;
+}
+
+/*
+Scroll Snap Points
+
+Allows snapping items into their correct position when scrolling or using arrow keys.
+
+Browser support is very limited as the specification is still moving. See [1].
+
+References:
+
+- [1] CSS WG: CSS Scroll Snap Module Level 1
+  https://drafts.csswg.org/css-scroll-snap/
+
+- [2] MDN: scroll-snap-type
+  https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type
+
+- [3] Sarah Drasner: Introducing CSS Scroll Snap Points
+  https://css-tricks.com/introducing-css-scroll-snap-points/
+
+- [4] Heydon Pickering: A Content Slider, Snappoints
+  https://inclusive-components.design/a-content-slider/#snappoints
+*/
+@supports (scroll-snap-points-x: repeat(100%)) or (-webkit-scroll-snap-points-x: repeat(100%)) {
+  .slider__list {
+    -webkit-scroll-snap-type: mandatory;
+    scroll-snap-type: mandatory;
+    -webkit-scroll-snap-points-x: repeat(100%);
+    scroll-snap-points-x: repeat(100%);
+  }
+}
+
+.slide figure {
+  position: relative;
+}
+
+@media only screen and (min-width: 800px) {
+  .slide__caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* background-color: hsla(var(--c-background-hslValue), 0.75); */
+    background-color: hsla(0, 0%, 95%, 0.85);
+  }
+}
+
+/*
+Hide images that can only be loaded porperly with Javascript.
+Without JS, the data-src attribute cannot be swapped out for the src attribute.
+*/
+[js-disabled] img[data-src] {
+  display: none;
+}
+
+/* .slider__list::-webkit-scrollbar {
+  background-color: var(--c-background);
+}
+
+.slider__list::-webkit-scrollbar-thumb {
+  background-color: #666;
+} */

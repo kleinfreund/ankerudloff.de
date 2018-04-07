@@ -1,0 +1,27 @@
+.nav {
+  list-style: none;
+  margin-bottom: 0;
+  display: inline-flex;
+}
+
+.nav a {
+  padding: calc(var(--spacing) / 4);
+}
+
+/*
+1: Avoids white space in the navigation items.
+   This allows for nicer positioning of decorative pseudo elements.
+*/
+.nav__item {
+  display: inline-flex; /* 1 */
+  align-items: center;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: calc(var(--spacing) / 4);
+}
+
+.nav__item:not(:last-child)::after {
+  margin-left: calc(var(--spacing) / 4);
+  content: "\B7";
+}
