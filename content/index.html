@@ -1,0 +1,93 @@
+<div class="gallery">
+  <!--
+    The slider’s container has a non-negative value for tabindex so that it can be activated
+    by the user. This enables keyboard interaction (see [1]).
+
+    - [1] Heydon Pickering, A Content Slider
+      https://inclusive-components.design/a-content-slider/#keyboardsupport
+  -->
+  <div class="slider">
+    <ul class="slider__list" tabindex="0" role="region" aria-describedby="gallery-focus" aria-label="gallery">
+      <li class="slide">
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' /%3E" data-src="/img/marienberg.jpg" alt="Dev Dummy content. I’m sorry for leaving this here.">
+
+          <noscript>
+            <img src="/img/marienberg.jpg" alt="Dev Dummy content. I’m sorry for leaving this here.">
+          </noscript>
+
+          <figcaption class="slide__caption">St. Marienkirche in Marienberg (Erzgebirge)</figcaption>
+        </figure>
+      </li>
+      <li class="slide">
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' /%3E" data-src="/img/schwarzenberg.jpg" alt="Dev Dummy content. I’m sorry for leaving this here.">
+
+          <noscript>
+            <img src="/img/schwarzenberg.jpg" alt="Dev Dummy content. I’m sorry for leaving this here.">
+          </noscript>
+
+          <figcaption class="slide__caption">St. Georgienkirche in Schwarzenberg (Erzgebirge)</figcaption>
+        </figure>
+      </li>
+      <li class="slide">
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' /%3E" data-src="/img/zwickau.jpg" alt="Dev Dummy content. I’m sorry for leaving this here.">
+
+          <noscript>
+            <img src="/img/zwickau.jpg" alt="Dev Dummy content. I’m sorry for leaving this here.">
+          </noscript>
+
+          <figcaption class="slide__caption">St. Katharinenkirche in Zwickau</figcaption>
+        </figure>
+      </li>
+      <li class="slide">
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' /%3E" data-src="/img/markneukirchen.jpg" alt="Dev Dummy content. I’m sorry for leaving this here.">
+
+          <noscript>
+            <img src="/img/markneukirchen.jpg" alt="Dev Dummy content. I’m sorry for leaving this here.">
+          </noscript>
+
+          <figcaption class="slide__caption">St. Nicolaikirche in Markneukirchen (Vogtland)</figcaption>
+        </figure>
+      </li>
+      <li class="slide">
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' /%3E" data-src="/img/adorf.jpg" alt="Dev Dummy content. I’m sorry for leaving this here.">
+
+          <noscript>
+            <img src="/img/adorf.jpg" alt="Dev Dummy content. I’m sorry for leaving this here.">
+          </noscript>
+
+          <figcaption class="slide__caption">St. Michaeliskirche in Adorf (Vogtland)</figcaption>
+        </figure>
+      </li>
+    </ul>
+
+    <div class="slider__instructions info">
+      <p class="slider-instruction slider-instruction--focus" id="gallery-focus">Nutze die Pfeiltasten zur Navigation</p>
+    </div>
+
+    <button class="slider-control slider__next" aria-label="Nächstes Bild" data-direction="next">
+      <svg aria-hidden="true" focusable="false">
+        <use xlink:href="#arrow-right"></use>
+      </svg>
+    </button>
+
+    <button class="slider-control slider__prev" aria-label="Vorheriges Bild" data-direction="prev">
+      <svg aria-hidden="true" focusable="false">
+        <use xlink:href="#arrow-left"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<svg style="display:none">
+  <symbol id="arrow-left" viewBox="0 0 10 10">
+    <path fill="currentColor" d="m9 4h-4v-2l-4 3 4 3v-2h4z" />
+  </symbol>
+  <symbol id="arrow-right" viewBox="0 0 10 10">
+    <path fill="currentColor" d="m1 4h4v-2l4 3-4 3v-2h-4z" />
+  </symbol>
+</svg>
