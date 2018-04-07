@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Site still in development. Remove later. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Anke Rudloff – Glockengestaltung</title>
+
+  <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
+
+  <script src="{{ '/js/main.js' | url }}"></script>
+</head>
+
+<body js-disabled>
+
+  <div class="wrapper">
+    <header class="site-head">
+      <h1>Anke Rudloff</h1>
+
+      <p>Glockengestaltung</p>
+    </header>
+  </div>
+
+  <main class="page-content">
+
+    <div class="wrapper">
+      <hr>
+      <span style="font-family: monospace;">
+        /!\ Diese Seite befindet sich noch in Entwicklung. Bis bald! :) /!\<br>
+        title: [{{ title }}]<br>
+        slug: [{{ slug }}]
+      </span>
+      <hr>
+    </div>
+
+    {{ layoutContent | safe }}
+
+  </main>
+
+  <div class="wrapper">
+    <footer class="site-foot">
+      <ul class="nav">
+        <li class="nav__item">
+          <a href="/content/kontakt">Kontakt</a>
+        </li>
+        <li class="nav__item">
+          <a href="/content/rechtliches">Rechtliches</a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+
+</body>
+
+</html>
