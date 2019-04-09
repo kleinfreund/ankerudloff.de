@@ -1,3 +1,5 @@
 {
-  "layout": "layouts/content.njk"
+  "tags": "content",
+  "layout": "layouts/content.njk",
+  "permalink": "{{ page.fileSlug }}/index.html"
 }

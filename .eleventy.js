@@ -1,7 +1,9 @@
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('img');
-  eleventyConfig.addPassthroughCopy('css');
-  eleventyConfig.addPassthroughCopy('js');
+  // Copies static files to output.
+  eleventyConfig
+    .addPassthroughCopy('img')
+    .addPassthroughCopy('css')
+    .addPassthroughCopy('js');
 
   return {
     htmlTemplateEngine: 'njk',
@@ -13,5 +15,5 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: '.'
     }
-  }
+  };
 };

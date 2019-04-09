@@ -1,3 +1,6 @@
+---
+title: 'St. Michaeliskirche in Adorf (Vogtland)'
+---
 ## St. Michaeliskirche in Adorf (Vogtland)
 
 2004 erhielt die Adorfer Kirche vier neue Bronzeglocken. Bibeltexte und Texte aus Liedern bilden den Leitfaden für die Gestaltung.

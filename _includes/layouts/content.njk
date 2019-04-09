@@ -1,4 +1,9 @@
 ---
 layout: layouts/base.njk
+permalink: "{{ page.fileSlug }}/index.html"
 ---
-{{ layoutContent | safe }}
+<div class="wrapper">
+  <main class="page-content">
+    {{ layoutContent | safe }}
+  </main>
+</div>

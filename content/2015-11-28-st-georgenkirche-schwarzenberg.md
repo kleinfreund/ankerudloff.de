@@ -1,3 +1,6 @@
+---
+title: 'St. Georgenkirche in Schwarzenberg (Erzgebirge)'
+---
 ## St. Georgenkirche in Schwarzenberg (Erzgebirge)
 
 Für die Zierden der Schwarzenberger Bronzeglocken, die 2015 gegossen wurden, habe ich eine umlaufende Gestaltung gewählt. Sie stellen die Verbindung zur vorhandenen restaurierten Glocke her.

@@ -1,3 +1,6 @@
+---
+title: 'St. Katharinenkirche in Zwickau'
+---
 ## St. Katharinenkirche in Zwickau
 
 Das historische Geläut wurde 2012 mit zwei neuen Glocken vervollständigt. Jede Glocke erhält zwei Bildmotive. Die Glocke

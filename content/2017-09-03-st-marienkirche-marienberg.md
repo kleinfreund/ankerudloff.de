@@ -1,3 +1,6 @@
+---
+title: 'St. Marienkirche in Marienberg (Erzgebirge)'
+---
 ## St. Marienkirche in Marienberg (Erzgebirge)
 
 Zum 500. Jubiläumsjahr der Reformation 2017 wurden für die Glocken der St. Marienkirche die vier Leitsätze der Reformation in eine bildhafte Gestaltung übertragen. Bildmotive, verbindende Linien, neu interpretierte und eingearbeitete Schriftbänder sowie eigens gestaltete Engel für die Glockenkronen ergeben eine Einheit.
